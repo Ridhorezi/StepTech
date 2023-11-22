@@ -1,0 +1,73 @@
+name: step_tech
+description: StepTech Online Shope.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_vector_icons: ^2.0.0
+  google_fonts: ^6.1.0
+  flutter_staggered_grid_view: ^0.4.0
+  cached_network_image: ^3.3.0
+  flutter_rating_bar: ^4.0.1
+  flutter_slidable: ^3.0.0
+  flutter_screenutil: ^5.9.0
+  hive:
+  hive_flutter:
+  provider: ^6.0.5
+  http: ^1.1.0
+  flutter_svg: ^2.0.9
+  shared_preferences: ^2.2.2
+  webview_flutter: ^4.4.2
+  animated_button: ^0.2.0
+  icons_launcher: ^2.1.5
+  flutter_native_splash: ^2.3.6
+  flutter_launcher_icons: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/steptech-logo.png
+  color_dark: "#ffffff"
+  image_dark: assets/images/steptech-logo.png
+  android_gravity: center
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/steptech-logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/images/steptech-logo.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
+  windows:
+    generate: true
+    image_path: "assets/images/logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/images/logo.png"
+
+flutter:
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/json/
+
+
