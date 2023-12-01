@@ -4,6 +4,7 @@ import 'package:step_tech/controllers/auth_provider.dart';
 import 'package:step_tech/models/sneaker_model.dart';
 import 'package:step_tech/services/sneaker_helper.dart';
 import 'package:step_tech/views/shared/appstyle.dart';
+import 'package:step_tech/views/shared/banner_widget.dart';
 import 'package:step_tech/views/shared/home_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -70,23 +71,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     const SizedBox(
                       height: 5,
                     ),
-                    Text(
-                      "StepTech Shoes",
-                      style: appstyleWithHt(
-                        40,
-                        const Color.fromRGBO(241, 84, 18, 1),
-                        FontWeight.bold,
-                        1.5,
-                      ),
-                    ),
-                    Text(
-                      "Discounts up to 60% 🎉",
-                      style: appstyleWithHt(
-                        25,
-                        const Color.fromRGBO(52, 179, 241, 1),
-                        FontWeight.bold,
-                        1.2,
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 5, right: 23),
+                      child: BannerWidget(),
                     ),
                     TabBar(
                       padding: EdgeInsets.zero,

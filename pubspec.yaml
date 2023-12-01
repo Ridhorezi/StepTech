@@ -30,6 +30,7 @@ dependencies:
   icons_launcher: ^2.1.5
   flutter_native_splash: ^2.3.6
   flutter_launcher_icons: ^0.13.1
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
