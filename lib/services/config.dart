@@ -1,6 +1,6 @@
 class Config {
-  static const apiUrl = "square-optimum-muskrat.ngrok-free.app";
-  static const paymentBaseUrl = "square-optimum-muskrat.ngrok-free.app";
+  static const apiUrl = "step-tech-backend.vercel.app";
+  static const paymentBaseUrl = "step-tech-backend.vercel.app";
   static const String loginUrl = "/api/login";
   static const String paymentUrl = "/stripe/create-checkout-session";
   static const String signupUrl = "/api/register";
