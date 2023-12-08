@@ -11,7 +11,14 @@ class Helper {
   Future<List<Sneakers>> getMaleSneakers() async {
     try {
       var url = Uri.https(Config.apiUrl, Config.sneakers);
-      var response = await client.get(url);
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      });
 
       if (response.statusCode == 200) {
         final maleList = sneakersFromJson(response.body);
@@ -44,7 +51,15 @@ class Helper {
   Future<List<Sneakers>> getFemaleSneakers() async {
     try {
       var url = Uri.https(Config.apiUrl, Config.sneakers);
-      var response = await client.get(url);
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      });
+
       if (response.statusCode == 200) {
         final femaleList = sneakersFromJson(response.body);
         var female = femaleList
@@ -76,7 +91,15 @@ class Helper {
   Future<List<Sneakers>> getKidsSneakers() async {
     try {
       var url = Uri.https(Config.apiUrl, Config.sneakers);
-      var response = await client.get(url);
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      });
+
       if (response.statusCode == 200) {
         final kidsList = sneakersFromJson(response.body);
         var kids =
@@ -107,7 +130,15 @@ class Helper {
   Future<Sneakers> getMaleSneakersById(String id) async {
     try {
       var url = Uri.https(Config.apiUrl, "${Config.sneakers}/$id");
-      var response = await client.get(url).timeout(const Duration(seconds: 10));
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      }).timeout(const Duration(seconds: 10));
+
       if (response.statusCode == 200) {
         final sneaker = sneakersFromJsonById(response.body);
         return sneaker;
@@ -136,7 +167,15 @@ class Helper {
   Future<Sneakers> getFemaleSneakersById(String id) async {
     try {
       var url = Uri.https(Config.apiUrl, "${Config.sneakers}/$id");
-      var response = await client.get(url).timeout(const Duration(seconds: 10));
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      }).timeout(const Duration(seconds: 10));
+
       if (response.statusCode == 200) {
         final sneaker = sneakersFromJsonById(response.body);
         return sneaker;
@@ -165,7 +204,15 @@ class Helper {
   Future<Sneakers> getKidsSneakersById(String id) async {
     try {
       var url = Uri.https(Config.apiUrl, "${Config.sneakers}/$id");
-      var response = await client.get(url).timeout(const Duration(seconds: 10));
+
+      var response = await client.get(url, headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      }).timeout(const Duration(seconds: 10));
+
       if (response.statusCode == 200) {
         final sneaker = sneakersFromJsonById(response.body);
         return sneaker;
@@ -193,7 +240,13 @@ class Helper {
     try {
       if (searchQuery.isNotEmpty) {
         var url = Uri.https(Config.apiUrl, "${Config.search}$searchQuery");
-        var response = await client.get(url);
+        var response = await client.get(url, headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+        });
 
         if (response.statusCode == 200) {
           final results = sneakersFromJson(response.body);

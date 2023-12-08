@@ -18,7 +18,11 @@ class CartHelper {
       String? userToken = prefs.getString('token');
 
       Map<String, String> requestHeaders = {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
         "token": 'Bearer $userToken'
       };
 
@@ -61,7 +65,11 @@ class CartHelper {
       String? userToken = prefs.getString('token');
 
       Map<String, String> requestHeaders = {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
         "token": 'Bearer $userToken'
       };
 
@@ -113,7 +121,11 @@ class CartHelper {
       String? userToken = prefs.getString('token');
 
       Map<String, String> requestHeaders = {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
         "token": 'Bearer $userToken'
       };
 
@@ -154,7 +166,11 @@ class CartHelper {
 
       if (userToken != null) {
         Map<String, String> requestHeaders = {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
           "token": 'Bearer $userToken'
         };
 

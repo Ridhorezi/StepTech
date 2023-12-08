@@ -15,7 +15,13 @@ class AuthHelper {
   // Male
   Future<bool> login(LoginModel model) async {
     try {
-      Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
+      Map<String, String> requestHeaders = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      };
 
       var url = Uri.https(Config.apiUrl, Config.loginUrl);
 
@@ -61,7 +67,13 @@ class AuthHelper {
 
   Future<bool> register(SignupModel model) async {
     try {
-      Map<String, String> requestHeaders = {'Content-Type': 'application/json'};
+      Map<String, String> requestHeaders = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      };
 
       var url = Uri.https(Config.apiUrl, Config.signupUrl);
 
@@ -99,7 +111,11 @@ class AuthHelper {
       String? userToken = prefs.getString('token');
 
       Map<String, String> requestHeaders = {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
         "token": 'Bearer $userToken'
       };
 

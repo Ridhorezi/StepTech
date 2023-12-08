@@ -12,7 +12,11 @@ class PaymentHelper {
   Future<String> payment(Order model) async {
     try {
       Map<String, String> requestHeaders = {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
       };
 
       var url = Uri.https(Config.paymentBaseUrl, Config.paymentUrl);
